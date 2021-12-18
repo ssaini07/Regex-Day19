@@ -4,18 +4,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /*
- * Checking for user password rule 4 with regex
- * minimum of 8 character
- * one upper case
- * one numeric
- *  at least 1 special character must be there. 
+Testing all email id's provided. 
  */
 
 public class UserRegistration {
 
 	public boolean regexCheck(String oneSpecialCharacter) {
 
-		String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!#@%^&*(){}])[a-zA-Z0-9+-_!@#$%^&*(){}'.,]{8,}$";
+		String regex = "^[a-z.+_-]+[.a-z0-9]*+@[a-z0-9]+[.a-z]+[.a-z0-9]*$";
 
 		// Create a Pattern object
 		Pattern r = Pattern.compile(regex);
@@ -31,11 +27,15 @@ public class UserRegistration {
 //Driver class.
 	public static void main(String[] args) {
 		UserRegistration passwordCheck = new UserRegistration();
-		System.out.println(passwordCheck.regexCheck("aBvfk%()efn98n"));
-		System.out.println(passwordCheck.regexCheck("AAAbbbccc#$%^@123"));
-		System.out.println(passwordCheck.regexCheck("A~$^+=<>a1"));
-		System.out.println(passwordCheck.regexCheck("abvlkkm.-"));
-
+		System.out.println(passwordCheck.regexCheck("abc@yahoo.com"));
+		System.out.println(passwordCheck.regexCheck("abc-100@yahoo.com"));
+		System.out.println(passwordCheck.regexCheck("abc.100@yahoo.com"));
+		System.out.println(passwordCheck.regexCheck("abc111@abc.com"));
+		System.out.println(passwordCheck.regexCheck("abc-100@abc.net"));
+		System.out.println(passwordCheck.regexCheck("abc.100@abc.com.au"));
+		System.out.println(passwordCheck.regexCheck("abc@1.com"));
+		System.out.println(passwordCheck.regexCheck("abc@yahoo.com.com"));
+		System.out.println(passwordCheck.regexCheck("abc+100@yahoo.com"));
 	}
 
 }
