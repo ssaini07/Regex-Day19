@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
 public class FirstName {
 	public boolean regexCheck() {
 
-		String firstName = "ShUbham";
-		String pattern = "^[a-zA-Z]$";
+		String firstName = "Shubham";
+		String pattern = "^[A-Z][a-z]{3,}$";
 
 		// Create a Pattern object
 		Pattern r = Pattern.compile(pattern);
