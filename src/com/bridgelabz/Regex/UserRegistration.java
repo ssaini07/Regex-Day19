@@ -13,7 +13,7 @@ public class UserRegistration {
 	
 	public boolean regexCheck(String validEmail) {
 
-		String regex = "^[a-z.+_-]+[.a-z0-9]*+@[a-z0-9]+[.a-z]+[.a-z0-9]*$";
+		String regex = "^[0-9]{2}+[ ][0-9]{10}$";
 
 		// Create a Pattern object
 		Pattern r = Pattern.compile(regex);
@@ -29,8 +29,11 @@ public class UserRegistration {
 //Driver class.
 	public static void main(String[] args) {
 		UserRegistration checkEmail = new UserRegistration();
-		System.out.println(checkEmail.regexCheck("abc@yahoo.com"));
-		System.out.println(checkEmail.regexCheck("abc-100@yahoo.3454com"));
+		System.out.println(checkEmail.regexCheck("91 7474237474"));
+		System.out.println(checkEmail.regexCheck("91 337474237474"));
+		System.out.println(checkEmail.regexCheck("91237474237474"));
+		System.out.println(checkEmail.regexCheck("91 999990000"));
+		//System.out.println(checkEmail.regexCheck("abc-100@yahoo.3454com"));
 	}
 
 }
