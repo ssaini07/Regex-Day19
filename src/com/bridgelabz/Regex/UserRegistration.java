@@ -4,18 +4,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /*
- * Check user first name with regex
+ * Check user last name with regex
  */
-public class FirstName {
+public class UserRegistration {
 	public boolean regexCheck() {
 
-		String firstName = "Shubham";
+		String lastName = "Saini";
 		String pattern = "^[A-Z][a-z]{3,}$";
 
 		// Create a Pattern object
 		Pattern r = Pattern.compile(pattern);
 		// Now create a matcher object
-		Matcher m = r.matcher(firstName);
+		Matcher m = r.matcher(lastName);
 
 		if (m.matches()) {
 			return true;
@@ -25,8 +25,8 @@ public class FirstName {
 
 //Driver class.
 	public static void main(String[] args) {
-		FirstName fName = new FirstName();
-		System.out.println(fName.regexCheck());
+		UserRegistration lastName = new UserRegistration();
+		System.out.println(lastName.regexCheck());
 	}
 
 }
